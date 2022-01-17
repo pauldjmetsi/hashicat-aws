@@ -3,13 +3,14 @@ module "s3-bucket" {
   version = "2.2.0"
   # insert required variables here
 
-  bucket = "my-s3-bucket"
+  bucket = "${var.prefix}-s3-bucket"
+  #"my-s3-bucket"
   acl    = "private"
 
   versioning = {
     enabled = true
   }
 
-  bucket_prefix = var.prefix
+  #bucket_prefix = var.prefix
 
 }
